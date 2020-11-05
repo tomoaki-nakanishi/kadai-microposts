@@ -46,8 +46,4 @@ class User < ApplicationRecord
   def favorite?(micropost)
     self.favorites.find_by(micropost: micropost)
   end
-  
-  def feed_favorites
-    Micropost.where(id: self.like_ids)
-  end  
 end
